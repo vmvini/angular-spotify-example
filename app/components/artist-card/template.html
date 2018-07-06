@@ -1,0 +1,31 @@
+<div flex-xs flex-gt-xs="50" layout="column" ng-click="vm.showDetails()">
+    <md-card>
+        <img src="{{vm.artist.image}}" class="md-card-image">
+
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{vm.artist.name}}</span>
+            </md-card-title-text>
+        </md-card-title>
+
+        <md-card-content>
+            <p>
+                Popularity: {{vm.artist.popularity}}
+            </p>
+            <p>
+                Genres: {{vm.artist.genres}}
+            </p>
+        </md-card-content>
+
+        <!-- Buttons -->
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button 
+                ng-click="vm.favorite()"
+                class="md-icon-button" 
+                aria-label="Favorite">
+                <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            </md-button>
+        </md-card-actions>
+
+    </md-card>
+</div>
